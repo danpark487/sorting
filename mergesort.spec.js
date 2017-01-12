@@ -7,6 +7,12 @@ describe('Merge Sort', function(){
     expect( mergeSort([5,4,6,7,2,4]) ).toEqual( [2,4,4,5,6,7] );
   });
 
+
+  it('handles an array', function(){
+    expect( mergeSort([2,4,6,7,2,4,8,12]) ).toEqual( [2,2,4,4,6,7,8,12] );
+  });
+
+
   it('handles an array filled with same numbers', function(){
     expect( mergeSort([3,3,3,3,3]) ).toEqual( [3,3,3,3,3] );
   });
