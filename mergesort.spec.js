@@ -1,3 +1,27 @@
+describe('Split Array function', function() {
+  it('is able to split an array into two halves', function() {
+      expect( split([2,4,5,6,7,8,9])).toEqual( [[2,4,5], [6,7,8,9]] );
+  });
+  it('is able to split an array into two halves', function() {
+      expect( split([2,4,5,6,7,8,9,10])).toEqual( [[2,4,5,6], [7,8,9,10]] );
+  });
+});
+
+
+describe('Merge Array function', function() {
+  it('is able to combine two halves', function() {
+      expect( merge([2,4,5,6],[7,8,9])).toEqual( [2,4,5,6,7,8,9]);
+  });
+
+  it('is able to combine two halves', function() {
+      expect( merge([1,2,3,4],[5,6,7,8])).toEqual( [1,2,3,4,5,6,7,8]);
+  });
+
+  it('is able to combine two halves of same numbers', function() {
+      expect( merge([1,1,1,1],[1,1,1,1])).toEqual( [1,1,1,1,1,1,1,1]);
+  });
+});
+
 describe('Merge Sort', function(){
   it('handles an empty array', function(){
     expect( mergeSort([]) ).toEqual( [] );
@@ -23,23 +47,3 @@ describe('Merge Sort', function(){
 
 });
 
-describe('Split Array function', function() {
-  it('is able to split an array into two halves', function() {
-      expect( split([2,4,5,6,7,8,9])).toEqual( [[2,4,5], [6,7,8,9]] );
-  });
-  it('is able to split an array into two halves', function() {
-      expect( split([2,4,5,6,7,8,9,10])).toEqual( [[2,4,5,6], [7,8,9,10]] );
-  });
-});
-
-
-describe('Merge Array function', function() {
-  it('is able to combine two halves', function() {
-      expect( merge([2,4,5,6],[7,8,9])).toEqual( [2,4,5,6,7,8,9]);
-  });
-
-  it('is able to combine two halves', function() {
-      expect( merge([1,2,3,4],[5,6,7,8])).toEqual( [1,2,3,4,5,6,7,8]);
-  });
-
-});
